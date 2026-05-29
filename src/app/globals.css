@@ -16,11 +16,11 @@
 }
 
 html {
-  scroll-behavior: auto; /* Lenis handles smoothing */
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #04080f;
+  background-color: #0a0f1e;
   color: #f8f2e4;
   font-family: var(--font-inter);
   overflow-x: hidden;
@@ -36,7 +36,7 @@ body {
 
 /* ─── Scrollbar ─── */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #04080f; }
+::-webkit-scrollbar-track { background: #0a0f1e; }
 ::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 2px; }
 
 /* ─── Typography helpers ─── */
@@ -94,7 +94,7 @@ body {
 
 /* ─── Card glass ─── */
 .card-glass {
-  background: rgba(13, 22, 41, 0.6);
+  background: rgba(13, 25, 55, 0.7);
   border: 1px solid rgba(201,168,76,0.12);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -127,7 +127,7 @@ body {
 }
 
 .btn-primary:hover::before { transform: translateX(0); }
-.btn-primary:hover { color: #04080f; }
+.btn-primary:hover { color: #0a0f1e; }
 .btn-primary span { position: relative; z-index: 1; }
 
 /* ─── Cursor glow (desktop) ─── */
