@@ -94,7 +94,7 @@ body {
 
 /* ─── Card glass ─── */
 .card-glass {
-  background: rgba(13, 25, 55, 0.7);
+  background: rgba(22, 36, 74, 0.8);
   border: 1px solid rgba(201,168,76,0.12);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
