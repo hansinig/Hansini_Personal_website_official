@@ -4,13 +4,13 @@
 export const meta = {
   name: "Hansini Gundavarapu",
   title: "Data Science & Quantitative Economics",
-  school: "Tufts University · Class of 2027",
+  school: "Tufts University · Class of 2028",
   location: "Boston, MA",
   email: "hansini.gundavarapu@tufts.edu",
   emailPersonal: "hansinig101@gmail.com",
   phone: "(781) 929-0810",
   linkedin: "https://linkedin.com/in/hansini-gundavarapu-335768278",
-  github: "https://github.com/hansini",
+  github: "https://github.com/hansinig",
   tagline: "At the intersection of quantitative finance and full-stack engineering.",
   bio: "I'm a junior at Tufts University studying Data Science and Quantitative Economics. My work sits at the intersection of rigorous quantitative analysis and real-world application — from financial modeling and equity research to full-stack development and mapping tools that reach thousands of users.",
   roles: [
@@ -83,6 +83,7 @@ export interface Project {
   tools: string[];
   highlight?: string;
   featured?: boolean;
+  link?: string;
 }
 
 export const projects: Project[] = [
@@ -112,6 +113,7 @@ export const projects: Project[] = [
     tools: ["TypeScript", "MapLibre", "Next.js"],
     highlight: "1,000+ users",
     featured: true,
+    link: "https://github.com/hansinig",
   },
   {
     category: "Systems Programming · CS 15",
@@ -119,6 +121,7 @@ export const projects: Project[] = [
     description:
       "A grep-like file search tool built in C++ that recursively indexes directories and searches large codebases for exact and case-insensitive string matches. Designed for performance with a custom hash map implementation handling thousands of files.",
     tools: ["C++", "Data Structures", "Hashing"],
+    link: "https://github.com/hansinig",
   },
   {
     category: "Web Development · CS 20",
@@ -126,6 +129,7 @@ export const projects: Project[] = [
     description:
       "A series of web programming projects covering MongoDB, PHP/MySQL, React, and AJAX/JSON — building dynamic applications with both frontend interactivity and backend data management.",
     tools: ["React", "MongoDB", "PHP"],
+    link: "https://github.com/hansinig",
   },
 ];
 
