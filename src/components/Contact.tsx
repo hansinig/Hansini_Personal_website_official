@@ -38,7 +38,7 @@ export default function Contact() {
   const links = [
     { label: "Email", value: meta.emailPersonal, href: `mailto:${meta.emailPersonal}` },
     { label: "LinkedIn", value: "hansini-gundavarapu", href: meta.linkedin },
-    { label: "GitHub", value: "github.com/hansini", href: meta.github },
+    { label: "GitHub", value: "github.com/hansinig", href: meta.github },
   ];
 
   return (
