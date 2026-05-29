@@ -84,7 +84,7 @@ export default function Projects() {
   const rest = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="section-padding relative z-10">
+    <section id="projects" className="section-padding relative z-10 bg-navy-800">
       <div className="max-w-7xl mx-auto px-6">
         <motion.p
           initial={{ opacity: 0 }}
