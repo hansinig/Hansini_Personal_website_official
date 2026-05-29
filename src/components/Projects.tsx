@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { projects, type Project } from "@/data/portfolio";
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -9,7 +9,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const [hovered, setHovered] = useState(false);
 
-  return (
+  const inner = (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
@@ -17,7 +17,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       transition={{ duration: 0.7, delay: (index % 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative card-glass p-7 flex flex-col gap-4 cursor-default overflow-hidden group"
+      className={`relative card-glass p-7 flex flex-col gap-4 overflow-hidden group ${project.link ? "cursor-pointer" : "cursor-default"}`}
     >
       {/* Background shimmer on hover */}
       <motion.div
@@ -31,9 +31,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <span className="font-sans text-xs text-cream-200/30 tracking-wide">
           {project.category}
         </span>
-        {project.highlight && (
-          <span className="tag shrink-0">{project.highlight}</span>
-        )}
+        <div className="flex items-center gap-2 shrink-0">
+          {project.highlight && (
+            <span className="tag">{project.highlight}</span>
+          )}
+          {project.link && (
+            <span className="font-sans text-xs text-gold-500/60 group-hover:text-gold-400 transition-colors">↗</span>
+          )}
+        </div>
       </div>
 
       {/* Title */}
@@ -62,6 +67,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       />
     </motion.div>
   );
+
+  if (project.link) {
+    return (
+      <a href={project.link} target="_blank" rel="noopener noreferrer">
+        {inner}
+      </a>
+    );
+  }
+
+  return inner;
 }
 
 export default function Projects() {
