@@ -95,6 +95,7 @@ export const projects: Project[] = [
     tools: ["Excel", "Python", "Public Filings"],
     highlight: "$105 price target",
     featured: true,
+    link: "/equity_research_cava.pdf",
   },
   {
     category: "Trading Pitch · Tufts Trading Club",
@@ -104,6 +105,7 @@ export const projects: Project[] = [
     tools: ["Excel", "Bloomberg"],
     highlight: "$82 → $98 target",
     featured: true,
+    link: "/trading_pitch_sbux.pdf",
   },
   {
     category: "Full-Stack · JumboCode Nonprofit",
@@ -113,7 +115,7 @@ export const projects: Project[] = [
     tools: ["TypeScript", "MapLibre", "Next.js"],
     highlight: "1,000+ users",
     featured: true,
-    link: "https://github.com/hansinig",
+    link: "https://github.com/hansinigJumboCode/mhd",
   },
   {
     category: "Systems Programming · CS 15",
@@ -121,15 +123,15 @@ export const projects: Project[] = [
     description:
       "A grep-like file search tool built in C++ that recursively indexes directories and searches large codebases for exact and case-insensitive string matches. Designed for performance with a custom hash map implementation handling thousands of files.",
     tools: ["C++", "Data Structures", "Hashing"],
-    link: "https://github.com/hansinig",
+    link: "https://github.com/hansinig/Project-Gerp",
   },
   {
     category: "Web Development · CS 20",
     title: "Full-Stack Web Apps",
     description:
-      "A series of web programming projects covering MongoDB, PHP/MySQL, React, and AJAX/JSON — building dynamic applications with both frontend interactivity and backend data management.",
+      "Web programming final project covering MongoDB, PHP/MySQL, React, and AJAX/JSON — building dynamic applications with both frontend interactivity and backend data management.",
     tools: ["React", "MongoDB", "PHP"],
-    link: "https://github.com/hansinig",
+    link: "https://github.com/micliao7/CS20-Final-Project",
   },
 ];
 
