@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import { meta, education, activities } from "@/data/portfolio";
 
 const fadeUp = {
@@ -21,7 +20,6 @@ export default function About() {
   return (
     <section id="about" className="section-padding relative z-10">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Section label */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -31,52 +29,10 @@ export default function About() {
           01 — About
         </motion.p>
 
-        <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          {/* Portrait */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
-          >
-            <div className="relative aspect-[4/5] overflow-hidden">
-              {/* Gold frame accent */}
-              <div className="absolute -inset-3 border border-gold-500/20 z-0" />
-              <div className="absolute -inset-6 border border-gold-500/8 z-0" />
+        <div ref={ref} className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
 
-              {/*
-                ── PORTRAIT IMAGE ──────────────────────────────────────────────
-                Place your photo at:  public/portrait.jpg
-                (extracted from the PDF — see SETUP.md)
-              */}
-              <Image
-                src="/portrait.jpg"
-                alt="Hansini Gundavarapu"
-                fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
-
-              {/* Overlay tint */}
-              <div className="absolute inset-0 bg-gold-500/5 mix-blend-multiply" />
-            </div>
-
-            {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="absolute -bottom-6 -right-6 card-glass rounded-none p-5"
-            >
-              <p className="font-sans text-xs text-cream-200/50 tracking-widest uppercase mb-1">Currently</p>
-              <p className="font-serif text-cream-100 text-sm">Open to internships</p>
-              <p className="font-sans text-gold-500 text-xs mt-0.5">Finance & Data Analytics</p>
-            </motion.div>
-          </motion.div>
-
-          {/* Text block */}
-          <div className="lg:pt-4">
+          {/* Left col — bio + education */}
+          <div className="lg:col-span-2">
             <motion.h2
               custom={0}
               variants={fadeUp}
@@ -94,7 +50,7 @@ export default function About() {
               variants={fadeUp}
               initial="hidden"
               animate={inView ? "show" : "hidden"}
-              className="font-sans text-base text-cream-200/60 leading-relaxed mb-6"
+              className="font-sans text-base text-cream-200/60 leading-relaxed mb-8"
             >
               {meta.bio}
             </motion.p>
@@ -105,7 +61,7 @@ export default function About() {
               variants={fadeUp}
               initial="hidden"
               animate={inView ? "show" : "hidden"}
-              className="card-glass p-6 mb-8"
+              className="card-glass p-6"
             >
               <div className="flex items-start justify-between mb-3">
                 <div>
@@ -127,10 +83,26 @@ export default function About() {
                 ))}
               </div>
             </motion.div>
+          </div>
 
-            {/* Currently active */}
+          {/* Right col — active roles + status */}
+          <div className="flex flex-col gap-8">
+            {/* Currently badge */}
             <motion.div
               custom={3}
+              variants={fadeUp}
+              initial="hidden"
+              animate={inView ? "show" : "hidden"}
+              className="card-glass p-5"
+            >
+              <p className="font-sans text-xs text-cream-200/50 tracking-widest uppercase mb-1">Currently</p>
+              <p className="font-serif text-cream-100 text-sm">Open to internships</p>
+              <p className="font-sans text-gold-500 text-xs mt-0.5">Finance & Data Analytics</p>
+            </motion.div>
+
+            {/* Active roles */}
+            <motion.div
+              custom={4}
               variants={fadeUp}
               initial="hidden"
               animate={inView ? "show" : "hidden"}
@@ -138,7 +110,7 @@ export default function About() {
               <p className="font-sans text-xs tracking-widest uppercase text-cream-200/30 mb-4">
                 Active Roles
               </p>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-4">
                 {activities.map((a) => (
                   <div key={a.org} className="flex items-start gap-3">
                     <span className="mt-1.5 w-1 h-1 rounded-full bg-gold-500 shrink-0" />
@@ -151,6 +123,7 @@ export default function About() {
               </div>
             </motion.div>
           </div>
+
         </div>
       </div>
     </section>
