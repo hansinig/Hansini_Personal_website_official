@@ -5,50 +5,79 @@ export const meta = {
   name: "Hansini Gundavarapu",
   school: "Tufts University · Class of 2028",
   title: "Data Science & Quantitative Economics",
+  focus: ["AI & Data", "Leadership", "Finance"],
   location: "Boston, MA",
-  email: "hansini.gundavarapu@tufts.edu", // Outlook (school)
-  emailPersonal: "hansinig101@gmail.com", // Gmail
+  email: "hansini.gundavarapu@tufts.edu",
+  emailPersonal: "hansinig101@gmail.com",
   linkedin: "https://www.linkedin.com/in/hansini-gundavarapu-335768278/",
   github: "https://github.com/hansinig",
-  bio: "I'm a junior at Tufts studying Data Science and Quantitative Economics. I like work that mixes numbers with real-world impact, from equity research and financial modeling to building software people actually use.",
-  interests: "Interested in markets research, equity research, asset management, and fintech.",
+  bio: "I'm a junior at Tufts studying Data Science and Quantitative Economics. I lead teams across campus, from a 60+ student pre-orientation program to the Tufts Bhangra Team, and I build with data, code, and AI tools to turn messy information into clear decisions.",
+  interests: "Interested in AI, fintech, markets research, and asset management.",
 };
 
-export interface Experience {
+export interface Role {
   org: string;
   role: string;
   period: string;
   summary: string;
 }
 
-export const experience: Experience[] = [
-  {
-    org: "JPMorgan Chase & Co.",
-    role: "CareerED.YOU Fellow",
-    period: "Sep 2025 – Nov 2025",
-    summary:
-      "Competitive fellowship covering investment banking, markets, risk, and corporate finance, with workshops on valuation, credit risk, and M&A.",
-  },
-  {
-    org: "JumboCode",
-    role: "Software Developer",
-    period: "Sep 2025 – May 2026",
-    summary:
-      "Built a TypeScript + MapLibre map of 100+ Massachusetts schools for a nonprofit platform serving 1,000+ users.",
-  },
+export const leadership: Role[] = [
   {
     org: "SHAPE, Tufts Office of Student Life",
-    role: "Program Co-Coordinator",
+    role: "Pre-Orientation Coordinator",
     period: "Apr 2026 – Present",
     summary:
-      "Recruited and trained 19 facilitators for a civic engagement pre-orientation program for 60+ first-years.",
+      "Recruited and trained 19 peer facilitators and run a week-long civic leadership program for 60+ first-years, from housing and scheduling to community partnerships and outreach.",
+  },
+  {
+    org: "Tufts Bhangra Team",
+    role: "Team Manager",
+    period: "May 2026 – Present",
+    summary:
+      "Oversee a $10K+ budget, delegate across the eboard, and run logistics for 3 competitions and 7+ performances a season.",
+  },
+  {
+    org: "Tufts Association of South Asians",
+    role: "Events Coordinator",
+    period: "Sep 2025 – Present",
+    summary: "Plan 12+ large cultural and social events, growing member and campus engagement by 30%.",
+  },
+  {
+    org: "Boston Bhangra Inc.",
+    role: "Dance Choreographer & Coordinator",
+    period: "Apr 2026 – Present",
+    summary:
+      "Choreograph and teach original routines for a nonprofit arts company and coordinate 25+ parents and volunteers each season.",
   },
   {
     org: "TEDxTufts",
     role: "Speaker Coach",
     period: "Sep 2025 – Apr 2026",
-    summary: "Coached 10+ speakers on structure and delivery for an event with 200+ guests.",
+    summary: "Interviewed and coached 10+ speakers to build talks for 200+ attendees.",
   },
+];
+
+export const experience: Role[] = [
+  {
+    org: "JumboCode",
+    role: "Software Developer",
+    period: "Sep 2025 – May 2026",
+    summary:
+      "Built an interactive TypeScript + MapLibre school map that cut client lookup time from hours to seconds, and worked with 13 developers on improvements that raised nonprofit site traffic and data efficiency by 70%.",
+  },
+  {
+    org: "JPMorgan Chase & Co.",
+    role: "CareerED.YOU Fellow",
+    period: "Sep 2025 – Nov 2025",
+    summary:
+      "Selected from a competitive pool for a fellowship on markets, risk, and corporate finance, applying valuation and comps frameworks in live workshops.",
+  },
+];
+
+export const programs = [
+  { org: "McKinsey Forward", role: "Fellow" },
+  { org: "Tufts JumboVentures", role: "Team Member" },
 ];
 
 export interface Project {
@@ -61,34 +90,33 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "CAVA Group DCF & Comps",
-    category: "Equity Research",
+    title: "CAVA Group Equity Research",
+    category: "Equity Research · Python",
     description:
-      "3-statement model, DCF, and comparable company analysis on CAVA, with a long thesis.",
-    tools: ["Excel", "Python"],
+      "3-statement model, DCF, and comps on CAVA, plus a Python event study on earnings announcements for 20+ S&P 500 companies.",
+    tools: ["Python", "Excel", "Statistics"],
     link: "/equity_research_cava.pdf",
-  },
-  {
-    title: "Starbucks Long, Q2 FY2026",
-    category: "Trading Pitch · Tufts Trading Club",
-    description:
-      "Long pitch ahead of Q2 earnings, arguing the turnaround under CEO Brian Niccol was taking hold.",
-    tools: ["Excel", "Bloomberg"],
-    link: "/trading_pitch_sbux.pdf",
   },
   {
     title: "Massachusetts History Day",
     category: "Full-Stack · JumboCode",
     description:
-      "Interactive school-location map for a nonprofit case-management platform, built with a 13-person team.",
+      "Interactive school-location map for a nonprofit platform, built with a 13-person team.",
     tools: ["TypeScript", "MapLibre", "Next.js"],
     link: "https://github.com/JumboCode/mhd",
   },
   {
+    title: "Starbucks Long, Q2 FY2026",
+    category: "Trading Pitch · Tufts Investment Club",
+    description:
+      "Long pitch ahead of Q2 earnings built on Bloomberg data and first-hand channel checks.",
+    tools: ["Excel", "Bloomberg"],
+    link: "/trading_pitch_sbux.pdf",
+  },
+  {
     title: "Gerp",
     category: "Systems · CS 15",
-    description:
-      "grep-style file search tool in C++ that indexes directories with a custom hash map.",
+    description: "grep-style file search tool in C++ that indexes directories with a custom hash map.",
     tools: ["C++", "Hashing"],
     link: "https://github.com/hansinig/Project-Gerp",
   },
@@ -101,36 +129,9 @@ export const projects: Project[] = [
   },
 ];
 
-export const activities = [
-  {
-    org: "Tufts Bhangra",
-    role: "Team Manager",
-    detail: "Manage a $10K+ budget and 8-person eboard across 3 competitions and 7+ performances a season.",
-  },
-  {
-    org: "Tufts JumboVentures",
-    role: "Team Member",
-    detail: "",
-  },
-  {
-    org: "Boston Bhangra Inc.",
-    role: "Dance Coordinator",
-    detail: "",
-  },
-  {
-    org: "Tufts Association of South Asians",
-    role: "Events Coordinator",
-    detail: "Plan 12+ cultural events a year for 300+ members.",
-  },
-  {
-    org: "McKinsey Forward",
-    role: "Fellow",
-    detail: "",
-  },
-];
-
 export const skills = {
-  Finance: ["Financial Modeling", "DCF", "Comps", "3-Statement Models", "Equity Research", "Bloomberg"],
-  Technical: ["Python (pandas, NumPy)", "TypeScript", "React / Next.js", "SQL", "C++", "Excel"],
+  "AI & Data": ["Python (pandas, NumPy)", "SQL", "Microsoft Copilot", "Lovable", "Gamma", "Excel"],
+  Engineering: ["TypeScript", "JavaScript", "React", "C++", "HTML", "Tailwind CSS"],
+  Finance: ["Financial Modeling", "DCF Valuation", "Comps", "Event Studies", "Bloomberg"],
   Languages: ["English", "French (Intermediate)"],
 };
