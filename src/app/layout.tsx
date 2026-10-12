@@ -1,7 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
-import CursorGlow from "@/components/CursorGlow";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -57,8 +55,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#04080f",
-  colorScheme: "dark",
+  themeColor: "#f0f7ff",
+  colorScheme: "light",
 };
 
 // ─── Root Layout ─────────────────────────────────────────────────────────────
@@ -70,17 +68,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="noise bg-navy-950 text-cream-100 antialiased overflow-x-hidden">
-        <SmoothScroll>
-          <CursorGlow />
-          <Nav />
-          <main>{children}</main>
-          <Footer />
-        </SmoothScroll>
+      <body className="bg-white text-slate-800 antialiased">
+        <Nav />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
