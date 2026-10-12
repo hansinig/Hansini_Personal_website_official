@@ -1,47 +1,11 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { meta } from "@/data/portfolio";
+import SocialIcons from "./SocialIcons";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="relative z-10 border-t border-white/5 py-12">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="font-serif text-cream-200/30 text-sm">
-          © {year} Hansini Gundavarapu
-        </p>
-        <div className="flex items-center gap-6">
-          <a
-            href={meta.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-sans text-xs tracking-widest uppercase text-cream-200/30 hover:text-gold-500 transition-colors"
-          >
-            LinkedIn
-          </a>
-          <a
-            href={meta.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-sans text-xs tracking-widest uppercase text-cream-200/30 hover:text-gold-500 transition-colors"
-          >
-            GitHub
-          </a>
-          <a
-            href={`mailto:${meta.emailPersonal}`}
-            className="font-sans text-xs tracking-widest uppercase text-cream-200/30 hover:text-gold-500 transition-colors"
-          >
-            Email
-          </a>
-        </div>
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="font-sans text-xs tracking-widest uppercase text-cream-200/20 hover:text-gold-500 transition-colors"
-        >
-          Back to top ↑
-        </button>
+    <footer className="border-t border-brand-100 bg-white">
+      <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-3 px-5 py-6 sm:flex-row">
+        <p className="text-sm text-slate-500">© {new Date().getFullYear()} Hansini Gundavarapu</p>
+        <SocialIcons size={18} />
       </div>
     </footer>
   );
