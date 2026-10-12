@@ -10,9 +10,9 @@ const links = [
   { label: "Outlook", href: `mailto:${meta.email}`, Icon: PiMicrosoftOutlookLogoFill },
 ];
 
-export default function SocialIcons({ size = 22 }: { size?: number }) {
+export default function SocialIcons({ large = false }: { large?: boolean }) {
   return (
-    <div className="flex items-center gap-2">
+    <div className={`flex items-center ${large ? "gap-3 sm:gap-4" : "gap-2"}`}>
       {links.map(({ label, href, Icon }) => (
         <a
           key={label}
@@ -21,9 +21,13 @@ export default function SocialIcons({ size = 22 }: { size?: number }) {
           title={label}
           target={href.startsWith("http") ? "_blank" : undefined}
           rel="noopener noreferrer"
-          className="rounded-full p-2 text-brand-700 transition-colors hover:bg-brand-100 hover:text-brand-900"
+          className={
+            large
+              ? "flex h-14 w-14 items-center justify-center rounded-full bg-brand-700 text-white shadow-lg shadow-brand-700/30 ring-4 ring-white transition hover:-translate-y-1 hover:bg-brand-900 hover:shadow-xl sm:h-16 sm:w-16"
+              : "rounded-full p-2 text-brand-700 transition-colors hover:bg-brand-100 hover:text-brand-900"
+          }
         >
-          <Icon size={size} />
+          <Icon size={large ? 28 : 18} />
         </a>
       ))}
     </div>
