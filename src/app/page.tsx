@@ -1,14 +1,15 @@
 import Hero from "@/components/Hero";
-import { Experience, Activities } from "@/components/Experience";
+import { Leadership, Experience, Skills } from "@/components/Experience";
 import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <Leadership />
       <Experience />
       <Projects />
-      <Activities />
+      <Skills />
     </>
   );
 }
