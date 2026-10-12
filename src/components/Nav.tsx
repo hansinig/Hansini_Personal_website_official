@@ -1,7 +1,8 @@
 const links = [
+  { label: "Leadership", href: "#leadership" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Activities", href: "#activities" },
+  { label: "Skills", href: "#skills" },
 ];
 
 export default function Nav() {

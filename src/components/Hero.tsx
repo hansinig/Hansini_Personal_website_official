@@ -16,7 +16,14 @@ export default function Hero() {
             {meta.school}
           </p>
           <h1 className="mb-3 font-serif text-4xl text-brand-900 md:text-5xl">{meta.name}</h1>
-          <p className="mb-5 text-lg text-slate-600">{meta.title}</p>
+          <p className="mb-3 text-lg text-slate-600">{meta.title}</p>
+          <div className="mb-5 flex flex-wrap justify-center gap-2 md:justify-start">
+            {meta.focus.map((f) => (
+              <span key={f} className="rounded-full bg-brand-800 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                {f}
+              </span>
+            ))}
+          </div>
           <p className="mb-2 leading-relaxed text-slate-700">{meta.bio}</p>
           <p className="mb-6 leading-relaxed text-slate-700">{meta.interests}</p>
           <div className="flex justify-center md:justify-start">

@@ -1,13 +1,11 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { PiMicrosoftOutlookLogoFill } from "react-icons/pi";
 import { meta } from "@/data/portfolio";
 
 const links = [
   { label: "GitHub", href: meta.github, Icon: FaGithub },
   { label: "LinkedIn", href: meta.linkedin, Icon: FaLinkedin },
-  { label: "Gmail", href: `mailto:${meta.emailPersonal}`, Icon: SiGmail },
-  { label: "Outlook", href: `mailto:${meta.email}`, Icon: PiMicrosoftOutlookLogoFill },
+  { label: "Email", href: `mailto:${meta.email}`, Icon: SiGmail },
 ];
 
 export default function SocialIcons({ large = false }: { large?: boolean }) {
