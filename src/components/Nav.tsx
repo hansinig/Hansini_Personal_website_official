@@ -1,6 +1,6 @@
 const links = [
   { label: "Leadership", href: "#leadership" },
-  { label: "Experience", href: "#experience" },
+  { label: "Pre-Professional Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
 ];
