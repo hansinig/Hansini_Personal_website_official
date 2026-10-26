@@ -122,8 +122,8 @@ export const projects: Project[] = [
   {
     title: "CS 20 Final Project",
     category: "Web Development",
-    description: "Full-stack web app using React, MongoDB, and PHP/MySQL.",
-    tools: ["React", "MongoDB", "PHP"],
+    description: "ChapterUp, a full-stack book club app where clubs search books, nominate titles, and vote on their next read.",
+    tools: ["PHP", "MySQL", "JavaScript"],
     link: "https://github.com/hansinig/CS20-Final-Project",
   },
 ];
