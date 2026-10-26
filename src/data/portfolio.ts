@@ -132,5 +132,5 @@ export const skills = {
   "AI & Data": ["Python (pandas, NumPy)", "SQL", "Microsoft Copilot", "Lovable", "Gamma", "Excel"],
   Engineering: ["TypeScript", "JavaScript", "React", "C++", "HTML", "Tailwind CSS"],
   Finance: ["Financial Modeling", "DCF Valuation", "Comps", "Event Studies", "Bloomberg"],
-  Languages: ["English", "French (Intermediate)"],
+  Languages: ["English", "Telugu (Fluent)", "French (Intermediate)"],
 };
