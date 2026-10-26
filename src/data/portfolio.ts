@@ -11,7 +11,7 @@ export const meta = {
   emailPersonal: "hansinig101@gmail.com",
   linkedin: "https://www.linkedin.com/in/hansini-gundavarapu-335768278/",
   github: "https://github.com/hansinig",
-  bio: "I'm a junior at Tufts studying Data Science and Quantitative Economics. I lead teams across campus, from a 60+ student pre-orientation program to the Tufts Bhangra Team, and I build with data, code, and AI tools to turn messy information into clear decisions.",
+  bio: "I'm a junior at Tufts studying Data Science and Quantitative Economics, with a minor in AI Development. I'm passionate about bridging the gap between learning, communication, technology, products, and consumers. I lead teams across campus, from a 60+ student pre-orientation program to the Tufts Bhangra Team, and I build with data, code, and AI tools to turn messy information into clear decisions.",
   interests: "Interested in AI, fintech, markets research, and asset management.",
 };
 
@@ -76,8 +76,7 @@ export const experience: Role[] = [
 ];
 
 export const programs = [
-  { org: "McKinsey Forward", role: "Fellow" },
-  { org: "Tufts JumboVentures", role: "Team Member" },
+  { org: "Tufts Venture Partners", role: "Member" },
 ];
 
 export interface Project {
