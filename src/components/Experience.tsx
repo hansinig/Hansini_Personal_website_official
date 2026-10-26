@@ -30,7 +30,7 @@ export function Leadership() {
 export function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-4xl px-5 pb-12">
-      <h2 className="section-title">Experience</h2>
+      <h2 className="section-title">Pre-Professional Experience</h2>
       <RoleList items={experience} />
       <div className="mt-6 flex flex-wrap gap-2">
         {programs.map((p) => (
