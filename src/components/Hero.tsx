@@ -28,7 +28,7 @@ export default function Hero() {
           <p className="mb-6 leading-relaxed text-slate-700">{meta.interests}</p>
           <div className="flex justify-center md:justify-start">
             <a
-              href="/resume.pdf"
+              href="/Hansini_Resume_Finance___Data.pdf"
               target="_blank"
               className="rounded-full bg-brand-700 px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-brand-900"
             >
