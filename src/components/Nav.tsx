@@ -19,7 +19,7 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="/Hansini_Resume_Finance___Data.pdf"
             target="_blank"
             className="rounded-full bg-white px-4 py-1.5 font-medium text-brand-800 transition-colors hover:bg-brand-100"
           >
